@@ -35,5 +35,21 @@
 				</div>
 			</div>
 		</div>
+
+		<script>
+			
+			const apiKey = "6f4e9a209e873afba9f34037f1ad9f44";
+			const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=houston";
+
+			async function checkWeather() {
+				const response = await fetch(apiUrl + `&appid=${apiKey}`);
+				var data = await response.json();
+
+				console.log(data); 
+			}
+
+			checkWeather();
+
+		</script>
 	</body>
 </html>
